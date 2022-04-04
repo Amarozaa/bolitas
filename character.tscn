@@ -398,3 +398,7 @@ parameters/playback = SubResource( 9 )
 shape = SubResource( 31 )
 
 [node name="character" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.7, 1.7 )

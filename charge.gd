@@ -2,6 +2,7 @@ extends RigidBody2D
 
 func power1(direction,distance):
 	print(direction)
+	print("poder1")
 	apply_central_impulse(direction*500/distance)
 	pass
 
