@@ -49,6 +49,7 @@ func moving_physics_process(delta):
 			
 	if Input.is_action_just_pressed("power_1"):
 		state=State.POWER_1
+		
 		return
 		
 	if Input.is_action_just_pressed("power_2"):
@@ -88,8 +89,8 @@ func power1_physics_process(_delta):
 	
 	
 func power2_physics_process(_delta):
-	var direction=global_position.direction_to(charge.global_position)
-	var r_direction=Vector2(direction[1],-direction[0])
+	var direction=global_position.direction_to(charge.global_position) #vector unitario que apunta del pj a la carga
+	var r_direction=Vector2(direction[1],-direction[0])  #
 	var distance=global_position.distance_to(charge.global_position)
 	charge.power2(r_direction,distance,direction)
 	
