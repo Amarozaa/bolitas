@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fall (32x32).png-fcd7aef21285ddca813e2ebb0fa05c95.stex"
+path="res://.import/Hit (32x32).png-e3fa99f8a37873414ea11e38430eac14.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Virtual Guy/Fall (32x32).png"
-dest_files=[ "res://.import/Fall (32x32).png-fcd7aef21285ddca813e2ebb0fa05c95.stex" ]
+source_file="res://Virtual_Guy/Hit (32x32).png"
+dest_files=[ "res://.import/Hit (32x32).png-e3fa99f8a37873414ea11e38430eac14.stex" ]
 
 [params]
 

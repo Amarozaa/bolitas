@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jump (32x32).png-d2a20d81fa031a0359b593d4e6e3ef87.stex"
+path="res://.import/Wall Jump (32x32).png-b6e5c4b8b964b0b5e9b328ebaf636aa0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Virtual Guy/Jump (32x32).png"
-dest_files=[ "res://.import/Jump (32x32).png-d2a20d81fa031a0359b593d4e6e3ef87.stex" ]
+source_file="res://Virtual_Guy/Wall Jump (32x32).png"
+dest_files=[ "res://.import/Wall Jump (32x32).png-b6e5c4b8b964b0b5e9b328ebaf636aa0.stex" ]
 
 [params]
 

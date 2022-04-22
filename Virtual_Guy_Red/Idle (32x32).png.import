@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Double Jump (32x32).png-35b7f73435bdf8c04f5c7512ce570adf.stex"
+path="res://.import/Idle (32x32).png-f5a21f3df950a7613a64d24fa7f0df45.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Virtual Guy/Double Jump (32x32).png"
-dest_files=[ "res://.import/Double Jump (32x32).png-35b7f73435bdf8c04f5c7512ce570adf.stex" ]
+source_file="res://Virtual_Guy_Red/Idle (32x32).png"
+dest_files=[ "res://.import/Idle (32x32).png-f5a21f3df950a7613a64d24fa7f0df45.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

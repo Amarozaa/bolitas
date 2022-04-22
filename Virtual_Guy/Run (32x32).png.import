@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Run (32x32).png-b3059091bc2e0f5d50c6a3fcf31038c1.stex"
+path="res://.import/Run (32x32).png-1463d1610ed88bb3949e1a2463734905.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Virtual Guy/Run (32x32).png"
-dest_files=[ "res://.import/Run (32x32).png-b3059091bc2e0f5d50c6a3fcf31038c1.stex" ]
+source_file="res://Virtual_Guy/Run (32x32).png"
+dest_files=[ "res://.import/Run (32x32).png-1463d1610ed88bb3949e1a2463734905.stex" ]
 
 [params]
 

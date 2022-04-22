@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hit (32x32).png-c175c9b8cc5ebec9c9bc25835ad7ee4d.stex"
+path="res://.import/Fall (32x32).png-b9341f674d8c76d3942e2f2b4d2c3ba2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Virtual Guy/Hit (32x32).png"
-dest_files=[ "res://.import/Hit (32x32).png-c175c9b8cc5ebec9c9bc25835ad7ee4d.stex" ]
+source_file="res://Virtual_Guy_Red/Fall (32x32).png"
+dest_files=[ "res://.import/Fall (32x32).png-b9341f674d8c76d3942e2f2b4d2c3ba2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
