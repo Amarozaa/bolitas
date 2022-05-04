@@ -1,3 +1,5 @@
+tool
+
 extends KinematicBody2D
 enum State{ MOVING,POWER_1,POWER_2 }
 var vel=Vector2(0,0)
@@ -8,19 +10,26 @@ var c_jump=0
 var state=State.MOVING
 onready var anim_tree=$AnimationTree
 onready var playback = anim_tree.get("parameters/playback")
-export var positive= true
+export var positive = true setget set_positive
 onready var charge=get_parent().get_node("charge")
 onready var joint = get_node("PinJoint2D")
 onready var mono = get_parent().get_node("character")
-
-
+onready var sprite = $sprite
 
 
 #activar tree
 func _ready():
+	if Engine.editor_hint:
+		update_region()
+		return
+		
 	anim_tree.active = true
 
+
 func _physics_process(delta):
+	if Engine.editor_hint:
+		return
+
 	match state:
 		State.MOVING:
 			joint.set_node_b(mono.get_path())
@@ -30,6 +39,10 @@ func _physics_process(delta):
 			power1_physics_process(delta)
 		State.POWER_2:
 			power2_physics_process(delta)
+	
+	
+	if Input.is_action_just_pressed("test"):
+		self.positive = !positive
 			
 			
 			
@@ -118,19 +131,15 @@ func power2_physics_process(_delta):
 		state=State.MOVING
 		return
 
-	
-	
-		
 
-		
-			
-				
-	
-	
-	
-	 
-	
-	
-	
-	
-	
+func update_region():
+	sprite.region_enabled = true
+	sprite.region_rect.size = Vector2(sprite.texture.get_width(), 32)
+
+func set_positive(value):
+	positive = value
+	if positive:
+		sprite.region_rect.position = Vector2.ZERO
+	else:
+		sprite.region_rect.position = Vector2(0, 32)
+	update_region()
