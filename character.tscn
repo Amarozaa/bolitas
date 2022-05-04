@@ -14,9 +14,8 @@
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
-length = 0.8
+length = 0.9
 loop = true
-step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:texture")
 tracks/0/interp = 1
@@ -41,8 +40,8 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 11 ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("sprite:vframes")
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -50,20 +49,22 @@ tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 2 ]
+"values": [ {
+"args": [  ],
+"method": "update_region"
+} ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/path = NodePath("sprite:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 8.0, 9.0 ]
+"values": [ 0, 1, 2, 3, 4, 5, 7, 8, 9 ]
 }
 
 [sub_resource type="Animation" id=33]
@@ -120,7 +121,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite:hframes")
@@ -147,7 +148,7 @@ tracks/2/keys = {
 "values": [ 0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("sprite:vframes")
+tracks/3/path = NodePath("sprite:normal_map")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -156,31 +157,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("sprite:normal_map")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
 "values": [ null ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("sprite:frame_coords")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=25]
@@ -212,7 +189,7 @@ tracks/1/keys = {
 "values": [ 7 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("sprite:vframes")
+tracks/2/path = NodePath("sprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -221,19 +198,21 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 6 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 6.0, 6.0 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "update_region"
+} ]
 }
 
 [sub_resource type="Animation" id=35]
@@ -318,28 +297,30 @@ tracks/1/keys = {
 "values": [ 6 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("sprite:vframes")
+tracks/2/path = NodePath("sprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 1, 0, 3, 5, 5, 1, 2, 5, 5, 1, 0, 2, 3, 5, 5, 1 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.95 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1.0, 0.0, 2.0, 3.0, 5.0, 5.0, 1.0, 0.0, 2.0, 5.0, 5.0, 1.0, 0.0, 2.0, 3.0, 5.0, 5.0, 1.0 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "update_region"
+} ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -425,7 +406,7 @@ tracks/1/keys = {
 "values": [ 1 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("sprite:vframes")
+tracks/2/path = NodePath("sprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -434,19 +415,21 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 0 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0.0, 0.0, 0.0, 0.0 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "update_region"
+} ]
 }
 
 [sub_resource type="Animation" id=36]
@@ -575,28 +558,30 @@ tracks/1/keys = {
 "values": [ 12 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("sprite:vframes")
+tracks/2/path = NodePath("sprite:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 2 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 0.8, 9.0, 10.0, 11.0 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "update_region"
+} ]
 }
 
 [sub_resource type="Animation" id=34]
@@ -703,7 +688,7 @@ states/run/node = SubResource( 21 )
 states/run/position = Vector2( 614.978, 114.312 )
 transitions = [ "Idle", "jump", SubResource( 15 ), "jump", "Idle", SubResource( 16 ), "jump", "double_jump", SubResource( 19 ), "double_jump", "Idle", SubResource( 20 ), "Idle", "run", SubResource( 22 ), "run", "Idle", SubResource( 23 ), "run", "jump", SubResource( 24 ), "Idle", "ani_power_1", SubResource( 27 ), "ani_power_1", "Idle", SubResource( 28 ), "ani_power_1", "run", SubResource( 29 ), "run", "ani_power_1", SubResource( 30 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -8.3983, 1.1479 )
+graph_offset = Vector2( 70.6017, 24.1479 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
@@ -713,6 +698,13 @@ extents = Vector2( 9, 12 )
 [node name="kinematic" type="KinematicBody2D"]
 scale = Vector2( 3, 3 )
 script = ExtResource( 2 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0.333333, -4 )
+texture = ExtResource( 8 )
+hframes = 12
+region_enabled = true
+region_rect = Rect2( 0, 0, 224, 32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.3
@@ -728,12 +720,6 @@ anims/jump = SubResource( 4 )
 "anims/jump (copy) (copy)" = SubResource( 37 )
 anims/run = SubResource( 6 )
 "anims/run (copy)" = SubResource( 34 )
-
-[node name="sprite" type="Sprite" parent="."]
-position = Vector2( 0, -4 )
-texture = ExtResource( 3 )
-hframes = 12
-frame = 1
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 8 )
