@@ -38,7 +38,7 @@ func moving_physics_process(delta):
 	#movimientos horizontales
 	var oriented=Input.get_axis("left","right")
 	vel.x=lerp(vel.x,x_vel*oriented,0.3)
-	vel=move_and_slide(vel,Vector2(0,-1),  false,   4,   0.785398, true)
+	vel=move_and_slide(vel,Vector2(0,-1),  false,   4,   0.785398, false)
 
 	vel.y+=grav	
 	# saltos

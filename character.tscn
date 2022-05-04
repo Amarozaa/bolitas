@@ -1,15 +1,73 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=43 format=2]
 
-[ext_resource path="res://Virtual_Guy_Red/Double Jump (32x32).png" type="Texture" id=1]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Double Jump (32x32).png" type="Texture" id=1]
 [ext_resource path="res://kinematic.gd" type="Script" id=2]
 [ext_resource path="res://Virtual_Guy/Run (32x32).png" type="Texture" id=3]
 [ext_resource path="res://Virtual_Guy/Hit (32x32).png" type="Texture" id=4]
 [ext_resource path="res://Virtual_Guy/Jump (32x32).png" type="Texture" id=5]
 [ext_resource path="res://Virtual_Guy/Double Jump (32x32).png" type="Texture" id=6]
 [ext_resource path="res://Virtual_Guy/Idle (32x32).png" type="Texture" id=7]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Idle (32x32).png" type="Texture" id=8]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Run (32x32).png" type="Texture" id=9]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Hit (32x32).png" type="Texture" id=10]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Jump (32x32).png" type="Texture" id=11]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
+length = 0.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1.0, 2.0, 3.0, 4.0, 5.0, 7.0, 8.0, 9.0 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "Idle (copy)"
 length = 0.9
 loop = true
 step = 0.05
@@ -86,7 +144,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 7 ]
+"values": [ 0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("sprite:vframes")
@@ -127,6 +185,59 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id=25]
 resource_name = "ani_power_1"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 6.0, 6.0 ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "ani_power_1 (copy)"
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -227,7 +338,7 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.95 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
+"update": 1,
 "values": [ 1.0, 0.0, 2.0, 3.0, 5.0, 5.0, 1.0, 0.0, 2.0, 5.0, 5.0, 1.0, 0.0, 2.0, 3.0, 5.0, 5.0, 1.0 ]
 }
 
@@ -299,6 +410,60 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
+"values": [ ExtResource( 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=36]
+resource_name = "jump (copy)"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
 "values": [ ExtResource( 5 ) ]
 }
 tracks/1/type = "value"
@@ -326,8 +491,116 @@ tracks/2/keys = {
 "values": [ 0, 0, 0, 0 ]
 }
 
+[sub_resource type="Animation" id=37]
+resource_name = "jump (copy) (copy)"
+length = 0.2
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 0, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+
 [sub_resource type="Animation" id=6]
 resource_name = "run"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite:frame_coords:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 0.8, 9.0, 10.0, 11.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "run (copy)"
 length = 0.6
 loop = true
 step = 0.05
@@ -430,7 +703,7 @@ states/run/node = SubResource( 21 )
 states/run/position = Vector2( 614.978, 114.312 )
 transitions = [ "Idle", "jump", SubResource( 15 ), "jump", "Idle", SubResource( 16 ), "jump", "double_jump", SubResource( 19 ), "double_jump", "Idle", SubResource( 20 ), "Idle", "run", SubResource( 22 ), "run", "Idle", SubResource( 23 ), "run", "jump", SubResource( 24 ), "Idle", "ani_power_1", SubResource( 27 ), "ani_power_1", "Idle", SubResource( 28 ), "ani_power_1", "run", SubResource( 29 ), "run", "ani_power_1", SubResource( 30 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -168.872, -18.5723 )
+graph_offset = Vector2( -8.3983, 1.1479 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
@@ -444,12 +717,17 @@ script = ExtResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.3
 anims/Idle = SubResource( 2 )
+"anims/Idle (copy)" = SubResource( 33 )
 anims/RESET = SubResource( 3 )
 anims/ani_power_1 = SubResource( 25 )
+"anims/ani_power_1 (copy)" = SubResource( 35 )
 anims/double_jump = SubResource( 5 )
 "anims/double_jump (copy)" = SubResource( 32 )
 anims/jump = SubResource( 4 )
+"anims/jump (copy)" = SubResource( 36 )
+"anims/jump (copy) (copy)" = SubResource( 37 )
 anims/run = SubResource( 6 )
+"anims/run (copy)" = SubResource( 34 )
 
 [node name="sprite" type="Sprite" parent="."]
 position = Vector2( 0, -4 )
