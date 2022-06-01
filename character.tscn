@@ -695,7 +695,7 @@ graph_offset = Vector2( 70.6017, 24.1479 )
 [sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 9, 12 )
 
-[node name="kinematic" type="KinematicBody2D"]
+[node name="kinematic" type="KinematicBody2D" groups=["Camera_target"]]
 scale = Vector2( 3, 3 )
 script = ExtResource( 2 )
 
@@ -704,7 +704,7 @@ position = Vector2( 0.333333, -4 )
 texture = ExtResource( 8 )
 hframes = 12
 region_enabled = true
-region_rect = Rect2( 0, 0, 224, 32 )
+region_rect = Rect2( 0, 0, 352, 32 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.3
@@ -730,10 +730,6 @@ parameters/playback = SubResource( 9 )
 shape = SubResource( 31 )
 
 [node name="character" type="Node2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 1.5, 1.5 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 node_a = NodePath("..")

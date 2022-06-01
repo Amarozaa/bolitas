@@ -1,13 +1,17 @@
 extends RigidBody2D
 
-func power1(direction,distance):
+func power1(direction,distance):   
+	
+	 
 	print(direction)
 	apply_central_impulse(direction*500/distance)
 	pass
-
-func power2(r_direction,distance,direction):
+		
 	
-	print("d",direction)
+
+func power2(r_direction):
+	
+
 	print("r",r_direction)
 	apply_central_impulse(10*r_direction)
 	pass
